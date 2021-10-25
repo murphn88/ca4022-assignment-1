@@ -1,4 +1,4 @@
--- read in movies and ratings table
+-- create and load tables
 CREATE TABLE IF NOT EXISTS movies (movieId int, title String, yr Int)
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t' ;
@@ -58,8 +58,7 @@ FIELDS TERMINATED BY '\t'
 SELECT  userId, AVG(rating) AS avgrat, COUNT(rating)
 FROM    ratings
 GROUP BY userId
-ORDER BY avgrat DESC
-LIMIT 10;
+ORDER BY avgrat DESC;
 
 
 -- QUERY 4:
@@ -84,7 +83,6 @@ LIMIT 1;
 
 -- QUERY 6:
 -- How are ratings distributed by genre? 
-
 INSERT OVERWRITE LOCAL DIRECTORY '/home/niamh/hadoop/assignment_1/ml-latest-small/output/6' 
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY '\t'
