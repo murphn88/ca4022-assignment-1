@@ -1,6 +1,4 @@
-# CA4022 Assignment 1
-
-## Assignment 1: Pig and Hive on HADOOP MapReduce
+# CA4022 Assignment 1: Pig and Hive on HADOOP MapReduce
 
 This repository contains
   - Pig and Hive scripts used to clean and analyse the dataset.
